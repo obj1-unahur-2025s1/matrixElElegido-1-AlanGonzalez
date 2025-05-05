@@ -1,9 +1,24 @@
+import matrix.*
 
 
 describe "group of tests " {
 
-  test "test 01" {
-    assert.equals(100, 50+50)
+  test "neo es el elegido" {
+    assert.that(neo.esElElegido())
+  }
+
+
+  test "su vitalidad iniciarl" {
+    assert.equals(10, neo.vitalidad())
+  }
+
+  test "su vitalidad luego de saltar" {
+    neo.saltar()
+    assert.equals(5, neo.vitalidad())
+  }
+
+  test "trinity tiene vitalidad 0" {
+    assert.equals(0, trinity.vitalidad())
   }
 
 }
